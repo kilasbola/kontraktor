@@ -1,0 +1,19 @@
+{{ $src := .Get "src" | safeURL }}
+{{ $type_arr := split $src "." }}
+{{ $srcbase := index $type_arr 0 }}
+
+{{ $config := imageConfig (printf "/static/%s" $src) }}
+
+
+<figure class="mb-5 mt-5">
+  <img class="img-fluid d-block mx-auto rounded" src="{{ $srcbase | absURL }}.webp" alt="{{ .Get "caption" }}" height="{{$config.Height}}" width="{{$config.Width}}" loading="lazy"> 
+  {{ if .Get "caption" }}
+  <figcaption class="text-center">
+    {{ if .Get "href" }}
+    <a href="{{ .Get "href" }}" target="_blank">{{ .Get "caption" }}</a>
+    {{ else }}
+    {{ .Get "caption" }}
+    {{ end }}
+  </figcaption>
+  {{ end }}
+</figure>

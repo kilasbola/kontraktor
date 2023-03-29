@@ -1,0 +1,6 @@
+{{ if isset $.Site.Params "adsensepublisher" }}
+<amp-auto-ads
+    type="adsense"
+    data-ad-client="{{ $.Site.Params.adsensePublisher }}">
+</amp-auto-ads>
+{{ end }}

@@ -1,0 +1,195 @@
+
+
+hero_823:
+  id : byhero
+  title: Jual beli kikil 
+  tagline : Jasa Rental Kendaraan Motor, Mobil, Elf Hiace Plus Supir, dengan pelayanan terbaik di wilayah Madiun, Jawa Timur.
+  image: /images/hero-drtrans.png
+  link: "/rental-madiun/"
+  dest: |
+   - Di DRTRANS.ID, kami melayani wisatawan, expedisi. Jika Anda memiliki kebutuhan atau permintaan khusus, silakan beritahu dan kami antar unit ditempat Anda. 
+   - Jasa Sewa Elf (New Hiace Commuter) Plus Supir, dengan pelayanan terbaik di Madiun untuk mengantar ke berbagai tujuan.
+   - Tujuan kami adalah untuk melebihi ekspetasi anda. Jika anda perlu untuk menyewa mobil dan motor di Madiun kami siap melayani anda – www.drtrans.id
+  dest2: |
+   **Hati-hati** apabila ada pihak yang mengatasnamakan kami, selain dari nomor berikut kami 
+   tidak bertanggung jawab: (082-233-231-492)
+
+
+content_111:
+  id: content111
+  title: MARI BERKENDARA AMAN DAN NYAMAN BERSAMA DRTRANS.ID
+  image: /images/banner-drtrans.png
+  dest: |
+   
+    ## Layanan Optimal
+    Unit bersih, fasilitas lengkap, protokol kesehatan, driver sudah divaksin dan rutin tes SWAB Antigen. Sewa harian, antar jemput, hubungi kami. ***Unit terbatas!***
+
+    ## Rental Motor & Mobil
+    DRTRANS.ID merupakan perusahaan yang bergerak di bidang jasa sewa dan rental transportasi darat untuk kebutuhan personal maupun bisnis. Unit yang kami tawarkan adalah unit yang berkualitas, layak jalan, dengan driver yang terbaik. Klik tombol Booking Now untuk pemesanan melalui Whatsapp kami.
+
+    ## Rental Kendaraan Madiun
+    Harapan **DRTRANS.ID** Rental ingin memberikan pelayanan terbaik dengan etos kerja keras yang kami tanamkan ke tim dan para staff DRTRANS.ID Rental pada lini kebutuhan akan unit rental dari mulai segmen kendaraan keluarga, kendaraan operasional hingga kendaraan mewah. 
+
+
+
+fitur_111:
+  id: fitur111
+  title: Fitur 111
+  list:
+    - title: Rental Kendaraan Profesional
+      color: text-muted
+      image: >
+       <svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" viewBox="0 0 16 16" fill="grey" class="bi bi-emoji-sunglasses-fill" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/></svg>
+      dest: |
+       Apakah Anda tinggal di Madiun atau daerah lain, fleksibilitas dan layanan personal kami siap melayani semua kebutuhan pelanggan. Di DrTrans kami memiliki kunci untuk perjalanan mobil wisata atau korporat berkualitas.
+
+    - title: Harga Layanan Rental Bersaing 
+      color: text-warning
+      image: >
+       <svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" viewBox="0 0 16 16" fill="yellow" class="bi bi-emoji-wink-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM7 6.5C7 5.672 6.552 5 6 5s-1 .672-1 1.5S5.448 8 6 8s1-.672 1-1.5zM4.285 9.567a.5.5 0 0 0-.183.683A4.498 4.498 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.498 3.498 0 0 1 8 11.5a3.498 3.498 0 0 1-3.032-1.75.5.5 0 0 0-.683-.183zm5.152-3.31a.5.5 0 0 0-.874.486c.33.595.958 1.007 1.687 1.007.73 0 1.356-.412 1.687-1.007a.5.5 0 0 0-.874-.486.934.934 0 0 1-.813.493.934.934 0 0 1-.813-.493z"/></svg>
+      dest: |
+       Kami berdedikasi untuk menyediakan sewa mobil dan motor berkualitas tinggi. Dengan maintenance yang handal, namun dengan harga terjangkau di Madiun dan sekitarnya, kami siap melayani Anda.
+
+    - title: 24 Jam Layanan Respon Cepat
+      color: text-success
+      image: >
+       <svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" viewBox="0 0 16 16" fill="deeppink" class="bi bi-emoji-heart-eyes-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.559 5.448a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zm-.07-5.448c1.397-.864 3.543 1.838-.953 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg>
+      dest: |
+       Kami berdedikasi untuk menyediakan rental mobil dan motor berkualitas tinggi. Dengan maintenance dan supir yang handal, namun dengan harga terjangkau di Madiun dan sekitarnya, kami siap melayani Anda.
+
+    - title: Kendaraan Sepenuhnya Diasuransikan
+      color: text-success
+      image: >
+       <svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" viewBox="0 0 16 16" fill="orangered" class="bi bi-emoji-kiss-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M16 8a8 8 0 1 0-2.697 5.99c-.972-.665-1.632-1.356-1.99-2.062-.388-.766-.419-1.561-.075-2.23.496-.97 1.73-1.466 2.762-1.05.65-.262 1.38-.162 1.957.19.028-.275.043-.555.043-.838ZM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5Zm1.512 3.647c-.347.08-.737.198-1.107.319a.5.5 0 1 1-.31-.95c.38-.125.802-.254 1.192-.343.37-.086.78-.153 1.103-.108.16.022.394.085.561.286.188.226.187.497.131.705a1.894 1.894 0 0 1-.31.593c-.077.107-.168.22-.275.343.107.124.199.24.276.347.142.197.256.397.31.595.055.208.056.479-.132.706-.168.2-.404.262-.563.284-.323.043-.733-.027-1.102-.113a14.87 14.87 0 0 1-1.191-.345.5.5 0 1 1 .31-.95c.371.12.761.24 1.109.321.176.041.325.069.446.084a5.609 5.609 0 0 0-.502-.584.5.5 0 0 1 .002-.695 5.52 5.52 0 0 0 .5-.577 4.465 4.465 0 0 0-.448.082Zm.766-.086-.006-.002c.004 0 .006.002.006.002Zm.002 1.867h-.001l-.005.001a.038.038 0 0 1 .006-.002Zm.157-4.685a.5.5 0 0 1-.874-.486A1.934 1.934 0 0 1 10.25 5.75c.73 0 1.356.412 1.687 1.007a.5.5 0 1 1-.874.486.934.934 0 0 0-.813-.493.934.934 0 0 0-.813.493ZM14 9.828c1.11-1.14 3.884.856 0 3.422-3.884-2.566-1.11-4.562 0-3.421Z"/></svg>
+      dest: |
+       Kenyamanan. Keamanan. Rental mobil dan motor kami dijamin akan membuat pengalaman perjalanan Anda 100% bebas stres.
+
+
+demo_111:
+  id: demo111
+  title: Layanan Wisata Di Madiun
+  dest: |
+   Bersama DRTRANS, kemudahan dan kenyamanan Anda liburan menjadi yang paling utama. Perjalanan wisata bersama keluarga, sekolah, perusahaan, atau tour bersama pasangan dan rombongan akan lebih berkesan. Didukung dengan akomodasi transportasi yang lengkap dan tim yang berpengalaman, kami siap mengantarkan Anda ke berbagai destinasi menarik di berbagai kota wisata favorit. Range harga terbaik, sudah berpengalaman dan profesional, beragam akomodasi yang bisa di sesuaikan. Tempat wisata favorit di berbagai kota wisata di indonesia
+  list:
+    - title: Paket Travel Yogyakarta
+      image: "/images/wisata-yogyakarta-2022-min.png"
+      dest: |
+       Paket Wisata Dari Madiun ke berbagai destinasi Yogyakarta.
+
+    - title: Paket Travel Bali
+      image: "/images/wisata-bali-2022-min.png"
+      dest: |
+       Paket Wisata Dari Madiun ke berbagai destinasi Bali.
+
+    - title: Paket Travel Bandung
+      image: "/images/wisata-bandung-2022-min.png"
+      dest: |
+       Paket Wisata Dari Madiun ke berbagai destinasi Bandung.
+
+    - title: Paket Travel Lombok
+      image: "/images/wisata-lombok-2022-min.png"
+      dest: |
+       Paket Wisata Dari Madiun ke berbagai destinasi Lombok.
+
+
+
+
+fitur_222:
+  id: layanan222
+  title: Cakupan Layanan
+  list:
+    - title: Travel Door to Door
+      color: text-secondary
+      dest: |
+       DRTRANS melayani travel Door to Door di tempat yang Anda tentukan, sehingga membuat Anda lebih mudah dan efisien. Untuk info jadwal & rute lebih lengkap, Anda dapat menghubungi Customer Service kami.
+
+    - title: Rental Kendaraan
+      color: text-warning
+      dest: |
+       DRTRANS.ID melayani rental mobil dan motor dalam dan luar kota, sehingga memudahkan Anda untuk mengatur sendiri rencana bepergian. Anda dapat menghubungi Customer Service untuk informasi lebih lanjut.
+
+    - title: Kenyamanan
+      color: text-success
+      dest: |
+       Semua armada merupakan milik kami sendiri dengan dilengkapi sistem Global Positioning System (GPS) sehingga keberadaan tiap armada dapat kami pantau.
+
+    - title: Layanan Pelanggan
+      color: text-warning
+      dest: |
+       Anda akan dilayani oleh Customer Service kami yang responsif dan ramah. Juga Driver yang berpengalaman dan handal yang siap mengantar Anda sampai tujuan.
+
+
+
+
+
+content_222:
+  id: content222
+  title: PERTANYAAN YANG SERING DIAJUKAN (FAQ)
+  list:
+    - title: Apakah ada biaya tambahan jika saya ingin menyertakan GPS pada mobil?
+      color: text-secondary
+      dest: |
+       TIDAK kami akan memberikan GPS gratis untuk setiap mobil yang anda pesan.
+
+    - title: Apakah ada biaya tambahan untuk pengiriman mobil dan pick-up?
+      color: text-success
+      dest: |
+       Pengiriman mobil gratis di wilayah kota / kabupaten Madiun, silahkan hubungi kami untuk biaya di luar daerah Madiun.
+
+    - title: Bisakah kita membayar menggunakan Bank Transfer?
+      color: text-success
+      dest: |
+       Ya kami juga merima pembayaran melalui bank transfer BCA dan BRI. 
+
+    - title: Apa yang harus saya lakukan jika saya mengalami kecelakaan atau mobil rusak di jalan?
+      color: text-warning
+      dest: |
+       Anda harus menelepon kantor polisi setempat untuk melaporkan jika kecelakaan itu melibatkan pihak lain. Jika kecelakaan itu sendiri Anda dapat langsung menghubungi kami. Kami akan mengirimkan seseorang untuk memeriksa kerusakan dan mengurus asuransi. Kami akan melakukan penggantian mobil jika diperlukan. Meskipun semua mobil kami sudah di asuransikan, tetapi penyewa wajib membayar biaya administrasi. biaya lain yang tidak ditanggung oleh asuransi akan menjadi tanggung jawab penyewa.
+
+    - title: Apakah mobil dalam kondisi baik?
+      color: text-success
+      dest: |
+       Semua mobil kami berada dalam kondisi baik dan terawat. Kami memiliki tim mekanik dan bengkel pribadi, kita selalu melakukan perawatan berkala untuk setiap mobil. Sebelum penyerahan, mobil akan diperiksa lagi dan selalu dicuci bersih. 
+    
+    - title: Apakah mobil transmisi otomatis tersedia untuk sewa?
+      color: text-success
+      dest: |
+       DRTRANS juga menyediakan berbagai mobil dengan transmisi otomatis atau manual untuk disewakan. Kami memiliki Toyota Avanza dengan transmisi otomatis, Toyota Innova dengan transmisi otomatis, dan banyak mobil lebih otomatis, yang semuanya versi terbaru dari mobil. Kami menawarkan harga sewa untuk mobil dengan transmisi otomatis hanya sedikit lebih mahal daripada mobil manual.
+
+
+
+
+content_333:
+  id: content333
+  title: Mengawasi Pergaulan Remaja?
+  image: /images/default.png
+  dest: |
+    Ada ppppp
+
+
+
+
+
+
+
+
+content_444:
+  id: content444
+  title: Buktikan Pasangan Selingkuh?
+  image: /images/default.png
+  dest: |
+    Perangkat
+
+
+
+
+
+
+
+
+
+content_555:
+  id: content555
+  title: Syarat dan Kebijakan untuk Pengguna
+  dest: |
+    Semua pengguna

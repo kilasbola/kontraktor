@@ -1,0 +1,183 @@
+<section class="probootstrap-cover">
+    <div class="container">
+        <div class="row probootstrap-vh-75 align-items-center text-left">
+            <div class="col-sm">
+                <div class="probootstrap-text pt-5">
+                    <h1 class="probootstrap-heading text-white">{{ .Title }} - Telefone</h1>
+                    <div class="probootstrap-subheading mb-5">
+                        <h2 class="h6 text-white">Especificações completas, Para <u>{{ .Title }}</u> - OPINIÕES E REVISÕES DO USUÁRIO - Prós e Contras</h2>
+                        <span class="badge badge-dark">{{ .Date.Format "January 2, 2006" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="probootstrap-section">
+    <div class="container">
+        <div class="row">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8751263644994394" data-ad-slot="7617139874" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+</section>
+
+
+<section class="probootstrap-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-8">
+                <div class="text-container">
+                    <div class="card mb-5 mt-5">
+                        <img class="card-img-top" style="height: 15rem; width: 11rem; margin: 0 auto;padding-top: 1rem" src="https://aiodlobyyq.cloudimg.io/v7/{{$.Params.thumbnail | absURL }}?force_format=webp" alt="{{.Title}}">
+                        <div class="card-body">
+                            <h2 class="card-title h5">{{.Title}}</h2>
+                            <p class="card-text">Uma breve descrição das especificações do telefone celular {{.Title}} do seguinte modo.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Sistema operacional (SO) usa <u>{{$.Params.platform_os}}</u></li>
+                            <li class="list-group-item">Este celular usa um processador <strong><u>{{$.Params.platform_chipset}}</u></strong></li>
+                            <li class="list-group-item">Unidade Central de Processamento (CPU) usando <strong><u>{{$.Params.platform_cpu}}</u></strong></li>
+                            <li class="list-group-item">Unidade de processamento gráfico (GPU) Usando <strong><u>{{$.Params.platform_gpu}}</u></strong></li>
+                        </ul>
+                    </div>
+                    <ul class="mb-5 mt-5">
+                        <li>Data de lançamento do telefone {{.Title}} Ativado <strong>{{$.Params.launch_announced}}</strong></li>
+                        <li>Disponibilidade do cartão SIM no celular {{.Title}} : <u>{{$.Params.body_sim}}</u></li>
+                        <li>Usando a tecnologia de rede celular <a href="https://en.wikipedia.org/wiki/Information_and_communications_technology">{{$.Params.network_technology}}</a></li>
+                        <li>Por ter uma capacidade de armazenamento de energia {{$.Params.battery_capacity}}</li>
+                        <li>Este telefone tem dimensões <u>{{$.Params.body_dimensions}}</u></li>
+                        <li>Com o peso total deste telefone {{$.Params.body_weight}}</li>
+                        <li>Da tecnologia de tela {{.Title}} usar {{$.Params.display_type}}</li>
+                        <li>A largura da tela deste telefone tem um tamanho {{$.Params.display_size}}</li>
+                        <li>Tem uma resolução de tela <u>{{$.Params.display_resolution}}</u></li>
+                        <li>Com capacidade de armazenamento ROM / RAM <strong><u>{{$.Params.memory_internal}}</u></strong></li>
+                        <li>Com capacidade de armazenamento adicional (SD CARD) <strong><u>{{$.Params.memory_cardslot}}</u></strong></li>
+                        <li>{{$.Params.body_build}}</li>
+                    </ul>
+                    {{ $content := replace .Content "onclick" "title" }}
+                    {{ $content = replace $content "Network" "a Rede" }}
+                    {{ $content = replace $content "Launch" "Lançamento" }}
+                    {{ $content = replace $content "Body" "Corpo" }}
+                    {{ $content = replace $content "Display" "Exibição" }}
+                    {{ $content = replace $content "Platform" "Plataforma" }}
+                    {{ $content = replace $content "Memory" "Memória" }}
+                    {{ $content = replace $content "Main Camera" "Câmera traseira" }}
+                    {{ $content = replace $content "Selfie camera" "Câmera selfie" }}
+                    {{ $content = replace $content "Sound" "Som" }}
+                    {{ $content = replace $content "Comms" "Comunicações" }}
+                    {{ $content = replace $content "Features" "Recursos" }}
+                    {{ $content = replace $content "Battery" "Bateria" }}
+                    {{ $content = replace $content "Misc" "Diversas" }}
+                    {{ $content = replace $content "Tests" "Experiência " }}
+                    {{ $content = replace $content "href=\"" "href=\"#" }}
+                    {{ $content = replace $content "glossary3?term=" "" }}
+                    {{ $content = replace $content "Yes" "Sim" }}
+                    {{ $content = replace $content "No" "Não" }}
+                    {{ $content = replace $content "Technology" "Tecnologia" }}
+                    {{ $content = replace $content "Speed" "Rapidez" }}
+                    {{ $content = replace $content "Announced" "Anunciada" }}
+                    {{ $content = replace $content "Dimensions" "Dimensões" }}
+                    {{ $content = replace $content "Weight" "Peso" }}
+                    {{ $content = replace $content "Build" "Construir" }}
+                    {{ $content = replace $content "Type" "Tipo" }}
+                    {{ $content = replace $content "Size" "Tamanho" }}
+                    {{ $content = replace $content "Resolution" "Resolução" }}
+                    {{ $content = replace $content "Protection" "Proteção" }}
+                    {{ $content = replace $content "Card slot" "Slot para cartão" }}
+                    {{ $content = replace $content "Internal" "Interna" }}
+                    {{ $content = replace $content "Loudspeaker" "Alto-falante" }}
+                    {{ $content = replace $content "Charging" "A carregar" }}
+                    {{ $content = replace $content "Talk time" "Hora de conversar" }}
+                    {{ $content = replace $content "Music play" "Tocar música" }}
+                    {{ $content = replace $content "Colors" "Cores" }}
+                    {{ $content = replace $content "Models" "Modelos" }}
+                    {{ $content = replace $content "Price" "Preço" }}
+                    {{ $content = replace $content "Performance" "atuação" }}
+                    {{ $content = replace $content "Available" "acessível" }}
+                    {{ $content = replace $content "Released" "Liberada" }}
+                    {{ $content = replace $content "gsmarena" "" }}
+                    {{- $content = replace $content "helpW('" "" -}}
+                    {{- $content = replace $content ".htm');" "" -}}
+                    {{- $content = replace $content "onclick" "id" -}}
+                    {{- $content = replace $content "data-spec" "id" -}}
+                    {{- $content = replace $content " id-optional" "" -}}
+                    {{ $content = replace $content "" "" }}
+                    {{ $content | safeHTML }}
+                    {{ partial "content_dataphones" . }}
+                    <hr>
+                </div>
+
+
+                
+                <!-- .Similar -->
+                {{ $related := $.Site.RegularPages.RelatedIndices  . "categories" | first 99 }}
+                {{ with $related }}
+                {{ range . }}
+
+                <div class="card mb-5 mt-5">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="card-horizontal">
+                            <div class="img-square-wrapper text-center">
+                                <img src="{{.Params.thumbnail}}" loading="lazy" alt="{{ .Title }}" height="260" width="200">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                                <p class="card-text"><strong>lançamento : </strong>{{.Params.launch_announced}}</p>
+                                <p>
+                                <strong>Bateria : </strong> <em>{{.Params.battery_capacity}}</em></p>
+
+                                {{ with replace .Params.platform_os "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                                {{ with replace .Params.platform_chipset "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                                {{ with replace .Params.platform_cpu "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                                {{ with replace .Params.platform_gpu "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+
+
+
+
+            <aside class="col-md-4 blog-sidebar">
+                <div class="widget">
+                    <!-- 1-sidebar-sadapphone.com -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:250px;height:600px" data-ad-client="ca-pub-8751263644994394" data-ad-slot="8289061249"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    <header class="page-header mt-5">
+                        <h2>Última atualização</h2>
+                    </header>
+                    <div class="dropdown-divider"></div>
+                        {{ range first 15 (where .Site.RegularPages "Section" "dataphones") }}
+                        <h2 class="h5 mb-5">
+                            <a class="post-meta" href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h2>
+                        <hr>
+                        {{ end }}
+                    <header class="page-header mt-5">
+                        <h2>Listando Marcas</h2>
+                    </header>
+                    <div class="dropdown-divider"></div>
+                    {{ if isset .Site.Taxonomies "tags" }}
+                    {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+                    {{ range $name, $items := .Site.Taxonomies.tags }}
+                    <a class="badge badge-danger" href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title | humanize }} ({{ .Count }})</a>
+                    {{ end }}
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </aside>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,223 @@
+{{ $dataset := .Site.Data._index }}
+
+
+
+{{ with $dataset.hero_823 }}
+<!-- Header -->
+<section class="probootstrap-cover" id="{{.id}}">
+<div class="container">
+  <div class="row probootstrap-vh-100 align-items-center justify-content-center">
+    <div class="col-lg-6">
+        <img class="card-img-top" src="/images/hero2.svg" loading="lazy" height="500" width="500" alt="{{.title}}">
+    </div>
+    <div class="col-lg-6 mt-5">
+      <div class="probootstrap-text text-black">
+        <h1 class="probootstrap-heading mb-5">{{ .title }}</h1>
+        <div class="probootstrap-subheading mb-5">
+          <h2 class="h4 mb-3 mt-3">{{ .tagline }}</h2>
+          {{ .dest | markdownify }}
+        </div>
+        <a href="/wa1/" class="btn btn-primary btn-lg mb-5 mr-3">Booking Lewat Wa</a>
+        <a href="{{.link}}" class="btn btn-primary btn-lg mb-5">HUBUNGI KAMI</a>
+        <p>{{ .dest2 | markdownify }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- /Header -->
+{{ end }}
+
+
+
+
+{{ with $dataset.content_111 }}
+  {{ $src := .image | safeURL }}
+  {{ $config := imageConfig (printf "/static/%s" $src) }}
+<section class="probootstrap-section" id="{{.id}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+                <h2 class="mb-5">{{ .title }}</h2>
+                {{ .dest | markdownify }}
+            </div>
+            <div class="col-lg-6">
+                <img src="{{.image}}" alt="{{ .title }}" class="img-thumbnail" width="{{$config.Width}}" height="{{$config.Height}}">
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+
+<section class="probootstrap-section bg-warning" id="mobil">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-5">
+                <h2 class="h1">Rental Mobil</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            {{ range first 6 (where .Site.RegularPages "Section" "==" "mobil-madiun") }}
+
+                    {{$imagelink := print "/static" (.Params.thumbnail | relURL) }}
+                    {{$imgData := imageConfig $imagelink }}
+
+                    
+                    {{ $title := .Title }}
+                    {{ $a := replace ( replace $title "Madiun" " " ) "Rental" "" }}
+                    {{ $b := replace ( replace $a "Murah" " " ) " " " " }}
+                    {{ $c := replace ( replace $b "Terbaru" " " ) "&" "" }}
+
+
+                <div class="col-lg-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                        
+                        <img 
+                        class="card-img-top" 
+                        style="height: auto" 
+                        src="{{ .Params.thumbnail }}" 
+                        alt="{{.Title}}" 
+                        width="{{ $imgData.Width }}" height="{{ $imgData.Height }}" 
+                        loading="lazy">
+
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-3">{{ $c }}</h3>
+
+                        <p>Driver: <strong>{{.Params.driver}}</strong></p>
+                        <hr>
+                        <p>Seating: <strong>{{.Params.seating}}</strong></p>
+                        <hr>
+                        <p>Power: <strong>{{.Params.engine}}</strong></p>
+
+                        <a href="{{.Permalink}}" class="mb-5 mt-5 btn btn-primary btn-block btn-lg text-uppercase"> Lihat Detail </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            {{ end }}
+            
+        </div>
+        <div class="text-center">
+             <a href="/mobil-madiun/" class="btn btn-primary btn-lg text-uppercase">Lihat Semua...</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{{ with $dataset.fitur_111 }}
+<section class="probootstrap-section bg-primary text-dark" id="{{.id}}">
+    <div class="container">
+        <div class="row">
+            {{ range .list }}
+            <div class="col-lg-3">
+                <div class="mb-5">
+                    <div class="probootstrap-icon mb-3 {{ .color }}">
+                       {{ .image | safeHTML }}
+                    </div>
+                    <div class="mt-5">
+                        <h2 class="mt-0 h4">{{ .title }}</h2>
+                        <p>{{ .dest }}</p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+
+
+
+{{ with $dataset.demo_111 }}
+<section class="probootstrap-section" id="{{.id}}">
+    <div class="container">
+        <h2>{{ .title }}</h2>
+        <p>{{ .dest }}</p>
+        <div class="row">
+                  {{ range .list }}
+                    {{ $src := .image | safeURL }}
+                    {{ $config := imageConfig (printf "/static/%s" $src) }}
+                    <div class="col-lg-6 mb-5 mt-5">
+                        <div class="card rounded shadow">
+                            <img 
+                            src="{{ .image }}" 
+                            class="card-img-top" 
+                            style="height: auto" 
+                            alt="{{ .dest }}" 
+                            loading="lazy" width="521" height="372">
+                            <div class="card-footer">
+                            <p class="card-text">{{.dest}}</p>
+                            </div>
+                        </div>
+                    </div>
+                  {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+
+
+
+{{ with $dataset.fitur_222 }}
+<section class="probootstrap-section bg-primary text-dark" id="{{.id}}">
+    <div class="container">
+        <h2>{{.title}}</h2>
+        <div class="row">
+            {{ range .list }}
+            <div class="col-lg-3">
+                <div class="mb-5">
+                    <div class="probootstrap-icon mb-3">
+                       {{ .image | safeHTML }}
+                    </div>
+                    <div class="mt-5">
+                        <h2 class="mt-0 h4">{{ .title }}</h2>
+                        <p>{{ .dest }}</p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+
+
+{{ with $dataset.content_222 }}
+<section class="probootstrap-section bg-second" id="{{.id}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 pr-md-5 pr-0">
+                <h2 class="mb-5">{{.title}}</h2>                
+                {{ .dest | markdownify }}
+            </div>
+            {{ range .list }}
+            <div class="col-lg-6">
+             <details>
+              <summary>
+                <span class="summary-title h4">{{ .title }}</span>
+                <div class="summary-chevron-up">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </summary>
+               <div class="summary-content">{{.dest}}</div>
+               <div class="summary-chevron-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+              </div>
+             </details>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+

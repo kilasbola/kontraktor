@@ -1,0 +1,26 @@
+{
+   "build":{
+      "env":{
+         "HUGO_VERSION":"0.78.1"
+      }
+   },
+    
+
+   "redirects":[
+      {
+         "source":"/whatsapp/",
+         "destination":"https://wa.me/6281908264833",
+         "permanent":true
+      },
+      {
+         "source":"/wa/",
+         "destination":"https://wa.me/6281908264833",
+         "permanent":true
+      }
+   ] 
+
+  
+
+
+
+}

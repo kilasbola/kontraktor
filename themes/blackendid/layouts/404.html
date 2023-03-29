@@ -1,0 +1,95 @@
+{{ define "main" }}
+
+
+<div class="probootstrap-section">
+    <div class="container">
+        <div class="row justify-content-around">
+            <section class="col-lg-7">
+                <div class="text-container blog-post">
+                <h1 class="h2 mb-5">{{ .Title }}</h1>
+                <hr>
+                    <div class="mb-5 mt-5" role="alert">
+                        {{ .TableOfContents }}
+                    </div>
+                    <p>Maaf :( halaman yang Anda cari untuk sekarang sedang tidak tersedia / atau dihapus, kunjungi beranda <a href="https://sadapphone.com">https://sadapphone.com</a></p>
+                    
+                </div>
+
+                    <header class="widget-title mt-5">
+                        <h2 class="h1">Related Posts</h2>
+                    </header>
+
+                    {{ range first 7 (where .Site.RegularPages.ByDate "Section" "sadap") }}
+                         {{$imagelink := print "/static" (.Params.thumbnail | relURL) }}
+                         {{$imgData := imageConfig $imagelink }}
+                    <div class="card mb-5 mt-5">
+                        <img class="card-img-top" style="height: auto;" src="{{ .Params.thumbnail | default "/images/default.jpg" | absURL }}" alt="{{ .Title }}" height="{{ $imgData.Height }}" width="{{ $imgData.Width }}" loading="lazy">
+                        <div class="card-body">
+                            <h2 class="card-title h4"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                            <p>{{ .Summary }}</p>
+                        </div>
+                    </div>
+                    {{ end }}
+
+            </section>
+            {{ partial "sidebar" . }}
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="probootstrap-section">
+    <div class="container">
+        <div class="row justify-content-around">
+            <section class="col-lg-7">
+                <div class="text-container blog-post">
+                <h1 class="h2 mb-5">{{ .Title }}</h1>
+                <span>{{ .Date | time.Format ":date_medium" }}, in <a href="/{{.Section}}" target="_self">{{.Section}}</a></span>
+                <hr>
+                    <div class="mb-5 mt-5" role="alert">
+                        {{ .TableOfContents }}
+                    </div>
+                    {{ .Content }}
+                    
+                </div>
+                    
+                    <div id="tag">
+                      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                      <span class="badge" >
+                       <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                      </span>
+                      {{ end }}
+                    </div>
+
+                    <header class="widget-title mt-5">
+                        <h2 class="h1">Related Posts</h2>
+                    </header>
+
+                    {{ $related := .Site.RegularPages.Related . | first 10 }}
+                    {{ with $related }}
+                    {{ range . }}
+                         {{$imagelink := print "/static" (.Params.thumbnail | relURL) }}
+                         {{$imgData := imageConfig $imagelink }}
+                    <div class="card mb-5 mt-5">
+                        <img class="card-img-top" style="height: auto;" src="{{ .Params.thumbnail | default "/images/default.jpg" | absURL }}" alt="{{ .Title }}" height="{{ $imgData.Height }}" width="{{ $imgData.Width }}" loading="lazy">
+                        <div class="card-body">
+                            <h2 class="card-title h4"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                            <p class="card-text small">{{ .Summary }}</p>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ end }}
+            </section>
+            {{ partial "sidebar" . }}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  
+{{ end }}

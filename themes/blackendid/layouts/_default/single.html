@@ -1,0 +1,23 @@
+{{ define "head" }}
+
+{{ partial "component/meta/schema/breadcrumbs.json" . }}
+{{ partial "component/meta/schema/article.json" . }}
+
+
+
+{{ end }}
+
+
+
+
+
+{{ define "main" }}
+
+
+
+{{ .Render "summary" }}
+
+
+
+  
+{{ end }}

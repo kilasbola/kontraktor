@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ .Params.lang | default "id" }}">
+
+<head>
+    <title>{{.Title}}</title>
+
+    {{ partial "component/meta/data" . }}
+
+    {{ with .OutputFormats.Get "RSS" }}
+     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+    {{ end }}
+
+    {{ with .OutputFormats.Get "AMP" }}
+     <link rel="{{ .Rel }}" href="{{ .Permalink }}">
+    {{ end }}
+    
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    {{- with .Site.Params.googlefonts -}}
+    <link href="{{- . -}}" rel="stylesheet">
+    {{- else -}}
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    {{- end -}}
+    
+    
+    
+
+
+    
+    {{ $css := resources.Get "css/style.css" }}
+    {{ $grid := resources.Get "css/grid.css" }}
+    {{ $navbar := resources.Get "css/navbar.css" }}
+    {{ $card := resources.Get "css/card.css" }}
+    {{ $custom := resources.Get "css/custom.css" }}
+    {{ $btn := resources.Get "css/btn.css" }}
+
+    {{ $style := slice $css $grid $navbar $card $custom $btn | resources.Concat "style.css" | resources.Minify | resources.Fingerprint }}
+
+    <link href="{{ $style.RelPermalink }}" rel="stylesheet" type="text/css"/>
+
+
+    {{ $inline := resources.Get "css/inline.css" }}
+    
+
+    {{ $inline := slice $inline | resources.Concat "inline.css" | minify | fingerprint}}
+
+    <style>
+     {{ $inline.Content | safeCSS }}
+
+     .related {
+        border: 2px solid rgba(0,0,0,.150);
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgb(189 195 203 / 50%);
+     }
+     .related:hover {
+        border: 2px solid red;
+        border-radius: 10px;
+     }
+
+     .related img {
+        border-radius: 10px 10px 0 0 ;
+     }
+
+     .related a {
+        text-decoration: none;
+        color:black;
+     }
+
+     .google-auto-placed {
+        margin: 41px 0;
+     }
+
+    </style>
+
+    {{ block "head" . }} 
+    {{ end }}
+    
+
+    {{ template "_internal/google_analytics_async.html" . }}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8751263644994394",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+<body>
+
+    {{ partial "navigation" . }}
+    
+   
+
+    {{ block "main" . }} 
+    {{ end }}
+
+
+    {{ partial "footer" . }}
+</body>
+
+</html>

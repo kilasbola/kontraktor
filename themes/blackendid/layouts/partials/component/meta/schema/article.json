@@ -1,0 +1,36 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "@type": "Person",
+    "name" : "{{ .Params.author  | default .Site.Params.author}}",
+    "url": "{{ .Site.BaseURL }}{{ .Section }}/"
+  },
+  "headline": "{{ .Title }}",
+  "description": "{{ if .Params.description  }}{{ .Params.description }}{{else}}Update tutorial terbaru {{ now.Format "2006"}}, {{.Title}} - {{.Site.Title}}{{end}}",
+  "wordCount": {{ .WordCount }},
+  "datePublished" : "{{ .Date.Format "2006-01-02T15:04:05" }}",
+  "dateModified" : "{{ .Page.Lastmod.Format "2006-01-02T15:04:05"  }}",
+  "image" : {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "url": "https://aiodlobyyq.cloudimg.io/v7/{{ .Params.thumbnail | default "/images/default.png" | absURL }}?w=2000",
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05" }}",
+      "name": "{{ .Title }} - {{ .Site.Title }}",
+      "height" : 500,
+      "width" : 800
+    },
+  "mainEntityOfPage" : "{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "{{ $.Site.Title }}",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "{{ $.Site.Params.siteLogo | absURL }}",
+        "height" : 60,
+        "width" : 600
+    }
+  }
+}
+</script>

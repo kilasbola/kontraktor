@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html ⚡ lang="pt">
+
+<head>
+    {{ partial "component/meta/dataphones/data" . }}
+    {{ partial "component/meta/schema/dataphones/article.json" . }}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>{{ .Title }} - Especificações completas</title>
+    
+
+    <style amp-custom>
+
+      {{ partial "component/amp/blog-style-1.css" . | safeCSS }}
+      {{ with .Site.Params.fontfamily }} body { font-family: {{ . | safeCSS }}; } {{ end }}
+      {{ with .Site.Params.logofontfamily }} .h-logo { font-family: {{ . | safeCSS }}; } {{ end }}
+
+      .card p {
+          margin: 0
+      }
+
+      .h-100 {
+          height: 100%;
+      }
+
+      .card {
+          position: relative;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          min-width: 0;
+          word-wrap: break-word;
+          background-color: #fff;
+          background-clip: border-box;
+          border: 1px solid rgba(0, 0, 0, .125);
+          border-radius: .25rem;
+      }
+
+      .card-img-top {
+          width: 100%;
+          border-top-left-radius: calc(.25rem - 1px);
+          border-top-right-radius: calc(.25rem - 1px);
+      }
+
+      .card-body {
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          padding: 1.25rem;
+      }
+
+      .card-title {
+          margin-bottom: .75rem;
+      }
+
+      .card-text:last-child {
+          margin-bottom: 0;
+      }
+
+      .card-footer:last-child {
+          border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+      }
+
+      .card-footer {
+          padding: .75rem 1.25rem;
+          background-color: rgba(0, 0, 0, .03);
+          border-top: 1px solid rgba(0, 0, 0, .125);
+      }
+
+
+
+
+
+      .left {
+          text-align: left;
+      }
+
+      .right {
+          text-align: right;
+      }
+
+      .center {
+          text-align: center;
+          margin: 0 auto;
+      }
+
+      .justify {
+          text-align: justify;
+      }
+
+
+
+
+      .row {
+          position: relative;
+          width: 100%;
+      }
+
+      .row [class^="col"] {
+          float: left;
+          margin: 8px 2%;
+          min-height: 2px;
+      }
+
+      .col-1,
+      .col-2,
+      .col-12 {
+          width: 96%;
+      }
+
+      .col-1-sm {
+          width: 4.33%;
+      }
+
+      .col-2-sm {
+          width: 12.66%;
+      }
+
+      .col-12-sm {
+          width: 96%;
+      }
+
+      .row::after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      .hidden-sm {
+          display: none;
+      }
+
+      @media only screen and (min-width: 540px) {
+          .container {
+              width: 80%;
+          }
+      }
+
+      @media only screen and (min-width: 720px) {
+          .col-1 {
+              width: 4.33%;
+          }
+
+          .col-2 {
+              width: 12.66%;
+          }
+
+          .col-12 {
+              width: 96%;
+          }
+
+          .hidden-sm {
+              display: block;
+          }
+      }
+
+      @media only screen and (min-width: 960px) {
+          .container {
+              width: 75%;
+              max-width: 960px;
+          }
+      }
+
+
+      .mt-5 {
+          margin-top: 3rem;
+      }
+
+      .mb-5 {
+          margin-bottom: 3rem;
+      }
+      .text-center {
+          text-align: center;
+      }
+      .h5, h5 {
+          font-size: 1.5rem;
+      }
+  </style>
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+</head>
+
+<body>
+   <header class="main-header">
+        <nav class="blog-title">
+            <a href="{{.Site.BaseURL}}">
+                <amp-img src="{{ "https://d33wubrfki0l68.cloudfront.net/b79caa09a85346889110f69f36c1063862867306/acdad/data/images/logo.svg" | absURL }}" width="150" height="50" layout="fixed" alt="{{ .Title }} : {{.Site.Title}}">
+            </a>
+        </nav>
+    </header>
+
+
+    <main class="content" role="main">
+       <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">{{ .Title }} - Especificações completas</h1>
+            <section class="post-meta">
+                <p class="author">by <strong>{{ .Params.author | default "sadapphone" }}</strong></p>
+                <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}">{{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="kg-card-markdown">
+               <div class="card mb-5 mt-5">
+                    <amp-img src="https://aiodlobyyq.cloudimg.io/v7/{{$.Params.thumbnail | absURL }}?force_format=webp" alt="{{.Title}} - Especificações completas" height="260" width="200" layout="fixed"></amp-img>
+                    <div class="card-body">
+                        <h2 class="card-title h5">{{.Title}}</h2>
+                        <p class="card-text">Uma breve descrição das especificações do telefone celular {{.Title}} do seguinte modo.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Sistema operacional (SO) usa <u>{{$.Params.platform_os}}</u></li>
+                        <li class="list-group-item">Este celular usa um processador <strong><u>{{$.Params.platform_chipset}}</u></strong></li>
+                        <li class="list-group-item">Unidade Central de Processamento (CPU) usando <strong><u>{{$.Params.platform_cpu}}</u></strong></li>
+                        <li class="list-group-item">Unidade de processamento gráfico (GPU) Usando <strong><u>{{$.Params.platform_gpu}}</u></strong></li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>Data de lançamento do telefone {{.Title}} Ativado <strong>{{$.Params.launch_announced}}</strong></li>
+                    <li>Disponibilidade do cartão SIM no celular {{.Title}} : <u>{{$.Params.body_sim}}</u></li>
+                    <li>Usando a tecnologia de rede celular <a href="https://en.wikipedia.org/wiki/Information_and_communications_technology">{{$.Params.network_technology}}</a></li>
+                    <li>Por ter uma capacidade de armazenamento de energia {{$.Params.battery_capacity}}</li>
+                    <li>Este telefone tem dimensões <u>{{$.Params.body_dimensions}}</u></li>
+                    <li>Com o peso total deste telefone {{$.Params.body_weight}}</li>
+                    <li>Da tecnologia de tela {{.Title}} usar {{$.Params.display_type}}</li>
+                    <li>A largura da tela deste telefone tem um tamanho {{$.Params.display_size}}</li>
+                    <li>Tem uma resolução de tela <u>{{$.Params.display_resolution}}</u></li>
+                    <li>Com capacidade de armazenamento ROM / RAM <strong><u>{{$.Params.memory_internal}}</u></strong></li>
+                    <li>Com capacidade de armazenamento adicional (SD CARD) <strong><u>{{$.Params.memory_cardslot}}</u></strong></li>
+                    <li>{{$.Params.body_build}}</li>
+                </ul>
+                {{ $content := replace .Content "onclick" "title" }}
+                {{ $content = replace $content "Network" "a Rede" }}
+                {{ $content = replace $content "Launch" "Lançamento" }}
+                {{ $content = replace $content "Body" "Corpo" }}
+                {{ $content = replace $content "Display" "Exibição" }}
+                {{ $content = replace $content "Platform" "Plataforma" }}
+                {{ $content = replace $content "Memory" "Memória" }}
+                {{ $content = replace $content "Main Camera" "Câmera traseira" }}
+                {{ $content = replace $content "Selfie camera" "Câmera selfie" }}
+                {{ $content = replace $content "Sound" "Som" }}
+                {{ $content = replace $content "Comms" "Comunicações" }}
+                {{ $content = replace $content "Features" "Recursos" }}
+                {{ $content = replace $content "Battery" "Bateria" }}
+                {{ $content = replace $content "Misc" "Diversas" }}
+                {{ $content = replace $content "Tests" "Experiência " }}
+                {{ $content = replace $content "href=\"" "href=\"#" }}
+                {{ $content = replace $content "glossary3?term=" "" }}
+                {{ $content = replace $content "Yes" "Sim" }}
+                {{ $content = replace $content "No" "Não" }}
+                {{ $content = replace $content "Technology" "Tecnologia" }}
+                {{ $content = replace $content "Speed" "Rapidez" }}
+                {{ $content = replace $content "Announced" "Anunciada" }}
+                {{ $content = replace $content "Dimensions" "Dimensões" }}
+                {{ $content = replace $content "Weight" "Peso" }}
+                {{ $content = replace $content "Build" "Construir" }}
+                {{ $content = replace $content "Type" "Tipo" }}
+                {{ $content = replace $content "Size" "Tamanho" }}
+                {{ $content = replace $content "Resolution" "Resolução" }}
+                {{ $content = replace $content "Protection" "Proteção" }}
+                {{ $content = replace $content "Card slot" "Slot para cartão" }}
+                {{ $content = replace $content "Internal" "Interna" }}
+                {{ $content = replace $content "Loudspeaker" "Alto-falante" }}
+                {{ $content = replace $content "Charging" "A carregar" }}
+                {{ $content = replace $content "Talk time" "Hora de conversar" }}
+                {{ $content = replace $content "Music play" "Tocar música" }}
+                {{ $content = replace $content "Colors" "Cores" }}
+                {{ $content = replace $content "Models" "Modelos" }}
+                {{ $content = replace $content "Price" "Preço" }}
+                {{ $content = replace $content "Performance" "atuação" }}
+                {{ $content = replace $content "Available" "acessível" }}
+                {{ $content = replace $content "Released" "Liberada" }}
+                {{- $content = replace $content "helpW('" "" -}}
+                {{- $content = replace $content ".htm');" "" -}}
+                {{- $content = replace $content "onclick" "id" -}}
+                {{- $content = replace $content "data-spec" "id" -}}
+                {{- $content = replace $content " id-optional" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{- $content = replace $content "" "" -}}
+                {{ $content | safeHTML }}
+            </div>
+            {{ partial "content_dataphones" . }}            
+        </section>
+        <div class="mb-5 mt-5 text-center">
+            <a class="btn btn-primary" href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}#comments" title="{{.Title}}">Comments</a>
+        </div>
+       </article>
+
+        <aside>
+
+            {{ $gpu := replace $.Params.platform_gpu "(NO DATA)" "" }}
+            {{ $cpu := replace $.Params.platform_cpu "(NO DATA)" "" }}
+            {{ $chipset := replace $.Params.platform_chipset "(NO DATA)" "" }}
+            {{ $os := replace $.Params.platform_os "(NO DATA)" "" }}
+            <!-- .Similar -->
+            {{ $related := $.Site.RegularPages.RelatedIndices  . "categories" | first 99 }}
+            {{ with $related }}
+            <div class="recent_post mb-5 mt-5">
+                <h2>Telefones recentes</h2>
+                {{ range . }}
+                <div class="nav_post_body mb-5 mt-5">
+                    <div class="center">
+                        <amp-img src="{{ .Params.thumbnail }}" alt="{{.Title}} - Especificações completas" height="260" width="200" layout="fixed"></amp-img>
+                    </div>
+                    <h2><a href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}">{{ .Title }}</a></h2>
+                    <hr>
+                    <p class="card-text"><strong>lançamento : </strong>{{.Params.launch_announced}}</p>
+                    <p><strong>Bateria : </strong> <em>{{.Params.battery_capacity}}</em></p>
+                    {{ with replace .Params.platform_os "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                    {{ with replace .Params.platform_chipset "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                    {{ with replace .Params.platform_cpu "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                    {{ with replace .Params.platform_gpu "(NO DATA)" "" }}<p class="card-text">{{.}}</p>{{end}}
+                    <a class="btn btn-primary" href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}" title="{{.Title}}">Leia Mais →</a>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+
+        </aside>
+
+    </main>
+
+    <footer class="site-footer clearfix">
+        <section class="copyright">
+            <a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a> &copy; {{now.Format "2006"}} Copyright.
+        </section>
+        <section class="poweredby">All trademarks are the property of their respective owners.</section>
+    </footer>
+
+    {{ partial "component/amp/amp-auto-ads" . }}
+    {{ partial "component/amp/google_analytics" . }}
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+.ads_content_middle {
+    text-align: center;
+    padding: 150px 0 150px 0;
+}
+
+@media screen and (max-width: 600px) {
+    .probootstrap-cover .probootstrap-text .probootstrap-heading {
+    font-size: 34px;
+    line-height: 1.2;
+    }
+}
+
+textarea {
+	  white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+       }
+	   
+.fa-ul{font-size:16px}	   
+	
+
+.grid-item {
+    text-align: center;
+}
+
+.iconsvg {
+    fill: currentColor;
+    height: 4.2rem;
+    width: 1.5rem;
+}
+
+.h5, h5 {
+    font-size: 1.5rem;
+}
+
+.blog-post h2 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.blog-post h3 {
+    margin-top: 80px;
+    margin-bottom: 35px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    padding: 0.90em;
+    margin: 0.30em;
+}
+
+.label {
+    padding: 0.40em;
+}
+
+.text-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.mb-2, .my-2 {
+    margin-bottom: .5rem!important;
+}
+.mt-2, .my-2 {
+    margin-top: .5rem!important;
+}

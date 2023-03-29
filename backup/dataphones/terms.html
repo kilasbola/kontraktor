@@ -1,0 +1,106 @@
+{{ define "head" }}
+
+{{ partial "component/meta/schema/breadcrumbs.json" . }}s
+
+
+<style>
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6
+}
+
+.page-link:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6
+}
+</style>
+
+
+{{ end }}
+
+
+
+
+
+{{ define "main" }}
+
+<section class="probootstrap-section">
+    <div class="container">
+        <div class="row">
+          <section class="col-md-8">
+          {{ range first 99 (.Paginate .Data.Pages).Pages }}
+            <div class="card mb-4 box-shadow mb-5 mt-5">
+                <div class="card-body">
+                    <h2 class="h3 card-title">
+                        <a href="{{ .Permalink }}"> {{ .Title }}</a>
+                    </h2>
+                    <p class="card-text">{{ .Summary | safeHTML }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                           <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}"> {{ .Lastmod.Format ( .Site.Params.dateformat | default "2006") }}</time>
+                        </small>
+                    </div>
+                </div>
+            </div>
+          {{ end }}
+
+          {{ template "_internal/pagination.html" . }}
+          </section>
+
+          {{ partial "sidebar" . }}
+
+          
+        </div>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,41 @@
+<aside class="col-lg-3 blog-sidebar">
+    <div class="widget">
+
+        <header class="widget-title mt-5">
+            <h2>AD</h2>
+        </header>
+       <div class="py-5" style="background-color:#ebebeb;text-align:center;">
+        <ins class="adsbygoogle" style="display:inline-block;width:250px;height:600px" data-ad-client="ca-pub-8751263644994394" data-ad-slot="8289061249"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+       </div>
+        
+        
+
+    
+
+        <header class="widget-title mt-5">
+            <h2>Recents</h2>
+        </header>
+            {{ range first 7 .Site.RegularPages }}
+                <div class="media">
+                    <div class="media-body">
+                    <h2 class="h5"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+                    <span class="media-date">{{ .Date | time.Format ":date_medium" }}</span>
+                    </div>
+                </div>
+            {{ end }}
+
+        <header class="widget-title mt-5">
+            <h2>Tags</h2>
+        </header>
+            {{ if isset .Site.Taxonomies "tags" }}
+            {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+            {{ range $name, $items := .Site.Taxonomies.tags }}
+                <a class="badge badge-danger mb-3" href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title | humanize }} ({{ .Count }})</a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+    </div>
+</aside>

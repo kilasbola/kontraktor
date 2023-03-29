@@ -1,0 +1,155 @@
+# REFRENSI: 
+
+
+baseurl = "https://www.drtrans.id/"
+title = "DRTRANS.ID"
+description = "Layanan Rental Motor, Mobil, Elf Hiaice Plus Supir Sekitar Madiun"
+copyright = "© Copyright 2020 DRTRANS.ID All rights reserved."
+
+
+## SETUP
+languageCode = "id"
+theme = "blackendid"
+googleAnalytics = "UA-102730742-1"
+enableEmoji = true
+disableHugoGeneratorInject= true
+canonifyurls = true
+pluralizeListTitles = false
+preserveTaxonomyNames = true
+disqusShortname = "sadapphone"
+enableRobotsTXT = true
+
+
+paginate = 149
+
+### UPDATE 0.56.3 > 0.78.1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[minify]
+    [minify.tdewolff.html]
+      keepQuotes = true
+      keepWhitespace = true
+
+[outputs]
+home = ["HTML", "AMP",  "RSS"]
+page = ["HTML", "AMP", "RSS"]
+
+
+
+[related]
+  includeNewer = true
+  threshold = 100
+  toLower = false
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+
+        
+
+[mediaTypes]
+[mediaTypes."application/rss"]
+isPlainText = true
+suffixes = ["xml"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "index"
+
+
+
+## TAXTONAMIES
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  tagar = "tagar"
+
+
+## MENU
+[[menu.main]]
+    name = "Tentang Kami"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "about"
+    url = "/about-me/"
+[[menu.main]]
+    name = "Booking"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -120
+    url = "/rental-madiun/"
+[[menu.main]]
+    name = "Privacy Police"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -130
+    identifier = "privacy"
+    url = "/privacy-police/"
+
+    
+[[menu.footer]]
+    name = "Pemesanan"
+    pre = " |"
+    weight = -200
+    url = "/pemesanan/"
+[[menu.footer]]
+    name = "Blog"
+    pre = " |"
+    weight = -199
+    url = "/konten/"
+[[menu.footer]]
+    name = "Ketentuan"
+    pre = " |"
+    weight = -198
+    url = "/disclaimer/"
+[[menu.footer]]
+    name = "Feed"
+    pre = ""
+    weight = -197
+    url = "/index.xml"
+    
+    
+	
+#[params.features]
+#    enable = true
+
+
+
+[params]
+  ## SITE SETTING
+  #
+  siteLogo = "/logo.png"
+  author = "Joko Prabowo"
+  nomer = "081-334-546-905"
+  nomer_url = "+6281334546905"
+  whatsapp = "https://bit.ly/2KcjIY7"
+  
+  googleAnalytics = "UA-102730742-1"
+  twitter = "@twitter"
+  twitter_url = "https://www.twitter.com/twitter"
+  facebook_url = "https://www.facebook.com/facebook"
+  instagram_url = "https://www.instagram.com/instagram"
+
+  
+  ## ADSENSE
+  
+ adsensePublisher = "ca-pub-8751263644994394"
+  #
+  #adsenseInContent_01 = "4135016281"
+  #adsenseInContent_02 = "2247698475"
+  #adsenseInContent_03 = "3915045501"
+  #
+  #adsenseSticky = "1603441464"
+  
+
+  # THEME STYLE
+  brand_color= "#dc3545"
+  second_color= "silver"
+  
+  
+  googlefonts = "https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" 
+  fontfamily = "font-family: 'Roboto', sans-serif;" # Optional, Override body font family.
+  logofontfamily = "font-family: 'Inter', sans-serif;" # Optional, Override logo font.

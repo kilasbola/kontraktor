@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html ⚡ lang="{{ .Params.lang | default "id" }}">
+
+<head>
+    <title>{{.Title}}</title>
+
+    {{ partial "component/meta/data" . }}
+    
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+
+    {{ $inline := resources.Get "css/amp.css" }}
+    
+
+    {{ $inline := slice $inline | resources.Concat "css/amp.css" | minify | fingerprint}}
+    
+    <style amp-custom>
+
+    {{ $inline.Content | safeCSS }}
+
+    {{ with .Site.Params.fontfamily }} body { font-family: {{ . | safeCSS }}; } {{ end }}
+    {{ with .Site.Params.logofontfamily }} .h-logo { font-family: {{ . | safeCSS }}; } {{ end }}
+
+    .card p {
+        margin: 0
+    }
+
+    .h-100 {
+        height: 100%;
+    }
+
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+    }
+
+    .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+    }
+
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+    }
+
+    .card-title {
+        margin-bottom: .75rem;
+    }
+
+    .card-text:last-child {
+        margin-bottom: 0;
+    }
+
+    .card-footer:last-child {
+        border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+    }
+
+    .card-footer {
+        padding: .75rem 1.25rem;
+        background-color: rgba(0, 0, 0, .03);
+        border-top: 1px solid rgba(0, 0, 0, .125);
+    }
+
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .center {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .justify {
+        text-align: justify;
+    }
+
+
+    .row {
+        position: relative;
+        width: 100%;
+    }
+
+    .row [class^="col"] {
+        float: left;
+        margin: 8px 2%;
+        min-height: 2px;
+    }
+
+    .col-1,
+    .col-2,
+    .col-12 {
+        width: 96%;
+    }
+
+    .col-1-sm {
+        width: 4.33%;
+    }
+
+    .col-2-sm {
+        width: 12.66%;
+    }
+
+    .col-12-sm {
+        width: 96%;
+    }
+
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+
+    @media only screen and (min-width: 540px) {
+        .container {
+            width: 80%;
+        }
+    }
+
+    @media only screen and (min-width: 720px) {
+        .col-1 {
+            width: 4.33%;
+        }
+
+        .col-2 {
+            width: 12.66%;
+        }
+
+        .col-12 {
+            width: 96%;
+        }
+
+        .hidden-sm {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 960px) {
+        .container {
+            width: 75%;
+            max-width: 960px;
+        }
+    }
+
+    .post h2 {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+
+    .mt-5 {
+        margin-top: 3rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .h5, h5 {
+        font-size: 1.5rem;
+    }
+
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .link {
+      --link-color: #5bd56c;
+      margin-left: auto;
+      margin-right: 1rem;
+      padding: 1.7rem 1.25rem;
+      text-decoration: none;
+      border-radius: 0.75rem;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.15s ease-in-out;
+      transition-property: color, background-color;
+      font: bold 1.3rem sans-serif;
+    }
+
+    .link:hover {
+      --link-color: #2edd40;
+    }
+
+    .link--primary {
+      background-color: var(--link-color);
+      color: #fff;
+    }
+
+    .link--dark {
+      background-color: var(--link-color);
+      color: #000;
+    }
+
+
+    .link--duolingo {
+      box-shadow: 0 4px #3dab1f;
+    }
+    .link--duolingo:active {
+      transform: translateY(4px);
+      box-shadow: 0 0 #0595ae;
+    }
+
+    .bold {
+        font-weight: bolder;
+    }
+
+
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+
+    {{ partial "component/meta/schema/article.json" . }}
+</head>
+
+<body>
+
+<header class="main-header fixed-top">
+    <nav class="blog-title">
+        <a href="{{.Site.BaseURL}}">
+            <amp-img src="/images/logo.svg" width="40" height="50" layout="fixed" alt="{{ .Title }} : {{.Site.Title}}"></amp-img>
+        </a>
+        <a href="/wa1/" class="link link--duolingo link--dark bold">Hubungi Kami (WA)</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+        <header class="post-header">
+            <div class="mb-5 mt-5 ads_content_middle">
+                <!--ads-->
+            </div>
+            <h1 class="post-title">{{ .Title }}</h1>
+            <section class="post-meta">
+                <p class="author">by {{ .Site.Params.author | default "Admin" }}</p>
+                <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}">{{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time>
+            </section>
+        </header>
+        <section class="post-content">
+            <div class="kg-card-markdown">
+                <div id="TablesOfContent" class="well">
+                    {{ .TableOfContents }}
+                </div>
+
+
+                   {{ if $.Params.thumbnail }}
+                     {{$imagelink := print "/static" (.Params.thumbnail | relURL) }}
+                     {{$imgData := imageConfig $imagelink }}
+                    <div class="text-center shadow">
+                     <amp-img src="{{.Params.thumbnail}}" alt="{{.Title}}" width="{{ $imgData.Width }}" height="{{ $imgData.Height }}" layout="responsive"></amp-img>
+                    </div>
+                   {{ end }}
+
+                {{ .Content }}
+            </div>
+        </section>
+        <div class="mb-5 mt-5 text-center">
+            <a class="btn btn-primary" href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}#comments" title="{{.Title}}">Masukan Komentar</a>
+        </div>
+    </article>
+
+    <aside>
+        <div class="nav_post mt-5 mb-5">
+            <span class="prev_post">
+                <span>← Post Sebelumnya</span>
+                {{ with .PrevInSection }}
+                <div class="nav_post_body">
+                    <a href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}">
+                        <h2 class="h5">{{ .Title }}</h2>
+                        <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}"> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }} </time>
+                        {{ with .Section }}, in {{ . | upper }} {{ end }}
+                        {{ if eq (getenv "HUGO_ENV") "DEV" }}
+                        {{ .WordCount }} Words
+                        {{ if .IsDraft }}DRAFT{{ end }}
+                        {{ end }}
+                    </a>
+                </div>
+            </span>
+            {{ end }}
+            {{ with .NextInSection }}
+            <span class="next_post">
+                <span>Post Selanjutnya →</span>
+                <div class="nav_post_body">
+                    <a href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}">
+
+                        <h2 class="h5">{{ .Title }}</h2>
+                        <i class="fa fa-calendar-o first" aria-hidden="true"></i><time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}"> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time>
+                        {{ with .Section }}<i class="fa fa-bookmark" aria-hidden="true"></i> {{ . | upper }} {{ end }}
+                        {{ if eq (getenv "HUGO_ENV") "DEV" }}
+                        {{ .WordCount }} Words
+                        {{ if .IsDraft }}DRAFT{{ end }}
+                        {{ end }}
+                    </a>
+                </div>
+            </span>
+            {{ end }}
+        </div>
+        
+
+
+
+        <!-- .Similar -->
+        <div class="recent_post mt-sm">
+            <h2>Recent Posts</h2>
+            {{ $related := .Site.RegularPages.Related . | first 14 }}
+            {{ with $related }}
+            {{ range . }}
+                {{$imagelink := print "/static" (.Params.thumbnail | relURL) }}
+                {{$imgData := imageConfig $imagelink }}
+            <div class="nav_post_body mt-5 mb-5">
+                <a href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}">
+                <amp-img src="{{.Params.thumbnail}}" alt="{{.Title}}" height="{{ $imgData.Height }}" width="{{ $imgData.Width }}" layout="responsive"></amp-img>
+                <h2 class="mb-5 mt-5">{{.Title}}</h2>
+                </a>
+                <p>{{.Summary}}</p>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+        <div class="well mt-sm">
+            <h2>Tags</h2>
+            <div class="tags">
+                {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                <a href="/tags/{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }}), </a>
+                {{end}}
+            </div>
+        </div>
+    </aside>
+
+
+</main>
+
+
+<footer class="site-footer clearfix">
+    <section class="copyright">
+        <a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a> &copy; {{now.Format "2006"}} Copyright.
+    </section>
+    <section class="poweredby">All trademarks are the property of their respective owners.</section>
+</footer>
+
+<amp-sticky-ad layout="nodisplay">
+   <amp-ad width="320" height="50" type="doubleclick" data-slot="1603441464">
+ </amp-ad>
+</amp-sticky-ad>
+
+{{ partial "component/amp/google_analytics" . }}
+
+</body>
+
+</html>

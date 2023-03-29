@@ -1,0 +1,39 @@
+{{ $gpu := replace .Params.platform_gpu "(NO DATA)" "" }}
+{{ $cpu := replace .Params.platform_cpu "(NO DATA)" "" }}
+{{ $chipset := replace .Params.platform_chipset "(NO DATA)" "" }}
+{{ $os := replace .Params.platform_os "(NO DATA)" "" }}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "{{ .Params.author  | default .Site.Params.author}}"
+  },
+  "headline": "{{ .Title }}, Especificações",
+  "description": "{{ .Title }} Especificações Completas, preço, avaliações, {{- with $gpu -}}{{.}}{{- end -}}, {{- with $cpu -}}{{.}}{{- end -}}, {{- with $chipset -}}{{.}}{{- end -}}, {{$.Params.battery_capacity}}",
+  "wordCount": {{ .WordCount }},
+  "datePublished" : "{{ .Date.Format "2006-01-02T15:04:05" }}",
+  "dateModified" : "{{ .Page.Lastmod.Format "2006-01-02T15:04:05"  }}",
+  "image" : {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "url": "https://aiodlobyyq.cloudimg.io/v7/{{ .Params.thumbnail | default "/default.png" | absURL }}?w=2000",
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05" }}",
+      "name": "{{ .Title }} - {{.Site.Title}}",
+      "height" : 500,
+      "width" : 800
+    },
+  "mainEntityOfPage" : "{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "{{ .Site.Title }}",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "{{ $.Site.Params.siteLogo | absURL }}",
+        "height" : 60,
+        "width" : 600
+    }
+  }
+}
+</script>

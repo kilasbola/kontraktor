@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<div class="probootstrap-section">
+    <div class="container">
+        <div class="row justify-content-around">
+            <section class="col-lg-7">
+                <div class="text-container blog-post">
+                <h1 class="h2 mb-5">{{ .Title }}</h1>
+                <span>{{ .Date | time.Format ":date_medium" }}
+                <hr>
+                    <div class="mb-5 mt-5" role="alert">
+                        {{ .TableOfContents }}
+                    </div>
+                    {{ .Content }}
+                    
+                </div>
+                    
+                    <div class="mt-5" id="tag">
+                       {{ range .Params.tags }}
+                      <span class="badge mb-3" >
+                       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                      </span>
+                      {{ end }}
+                    </div>
+
+                    <header class="widget-title mt-5">
+                        <h2 class="h1">Related Posts</h2>
+                    </header>
+
+                    {{ range first 8 .Site.RegularPages }}
+                         {{$imagelink := print "/static" (.Params.thumbnail | relURL) }}
+                         {{$imgData := imageConfig $imagelink }}
+                    <div class="card related mb-5 mt-5">
+                        <a href="{{ .Permalink }}">
+                        <img class="card-img-top" style="height: auto;" src="{{ .Params.thumbnail | default "/images/default.jpg" | absURL }}" alt="{{ .Title }}" height="{{ $imgData.Height }}" width="{{ $imgData.Width }}" loading="lazy">
+                        <div class="card-body">
+                         <h2 class="card-title h4">{{ .Title }}</h2>
+                         <p>{{ .Summary | truncate 200 }}</p>
+                        </div>
+                        </a>
+                    </div>
+                    {{ end }}
+            </section>
+            {{ partial "sidebar" . }}
+        </div>
+    </div>
+</div>
+
+
+
+  
+{{ end }}

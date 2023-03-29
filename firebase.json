@@ -1,0 +1,70 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "Gemfile",
+      "Gemfile.lock",
+      "README.*"
+    ],
+    "redirects": [
+      {
+        "source": "/whatsapp/",
+        "destination": "https://api.whatsapp.com/send?phone=6285645161031&text=Informasinya%20kak,%20untuk%20keterangan%20aplikasi%20sadap.",
+        "type": 301
+      },
+	  {
+        "source": "/wa/",
+        "destination": "https://api.whatsapp.com/send?phone=6285645161031&text=Informasinya%20kak,%20untuk%20keterangan%20aplikasi%20sadap.",
+        "type": 301
+      },
+	  {
+        "source": "/chat-wa/",
+        "destination": "https://api.whatsapp.com/send?phone=6285645161031&text=Informasinya%20kak,%20untuk%20keterangan%20aplikasi%20sadap.",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": false,
+    "trailingSlash": true
+  }
+}

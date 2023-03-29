@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>    
+
+    {{ block "head" . }}
+
+    {{ end }}
+
+    {{ with .OutputFormats.Get "RSS" }}
+     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+    {{ end }}
+
+    {{ with .OutputFormats.Get "AMP" }}
+     <link rel="{{ .Rel }}" href="{{ .Permalink }}">
+    {{ end }}
+
+    <link rel="stylesheet" href="/css/mobile.css">
+
+    <style>
+      {{ partial "style.css" . | safeCSS }}
+      {{ partial "custom.css" . | safeCSS }}
+
+
+
+      /* table */
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        margin-bottom: 2em;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      table caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+      }
+
+      table tr {
+        background-color: #f8f8f8;  
+        padding: .35em;
+        border: 1px solid #ccc;
+      }
+
+      table th,
+      table td {
+        padding: .625em;
+      }
+
+      table th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 600px) {
+        table {
+          border: 0;
+        }
+
+        table caption {
+          font-size: 1.3em;
+        }
+        
+        table thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        
+        table tr {
+          border-bottom: 3px solid #ddd;
+          display: block;
+          margin-bottom: .625em;
+        }
+        
+        table td {
+          border-bottom: 1px solid #ddd;
+          display: block;
+          text-align: right;
+        }
+
+        table td::before {
+          /*
+          * aria-label has no advantage, it won't be read inside a table
+          content: attr(aria-label);
+          */
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        
+        table td:last-child {
+          border-bottom: 0;
+        }
+      }
+    </style>
+    
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    {{- with .Site.Params.googlefonts -}}
+    <link href="{{- . -}}" rel="stylesheet">
+    {{- else -}}
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    {{- end -}}
+   
+
+    {{ template "_internal/google_analytics_async.html" . }}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8751263644994394",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+<body>
+
+    {{ partial "navigation" . }}
+
+
+    
+
+
+    {{ block "main" . }} {{ end }}
+
+
+    {{ partial "footer" . }}
+
+    <script>
+    $(document).ready(function() {
+        $('table').addClass('table table-striped table-light');
+        $('th').addClass('thead-dark');
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<meta charset="utf-8"> 
+<link rel="canonical" href="{{ with .OutputFormats.Get "HTML" }}{{ .Permalink }}{{ end }}" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">  
+<meta itemprop="name" content="{{ .Title }} - {{ .Site.Title }}">
+<meta name="description" content="{{ if .Params.description  }}{{ .Params.description }}{{else}}Update tutorial terbaru {{ now.Format "2006"}}, {{.Title}} - {{.Site.Title}}{{end}}" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}"/>
+<meta property="og:image" content="{{ .Params.thumbnail | default "/default.png" | absURL }}"/>
+<meta property="og:site_name" content="{{ .Site.Title }}"/>
+<meta property="og:description" content="{{ if .Params.description  }}{{ .Params.description }}{{else}}Update tutorial terbaru, {{.Title}} - {{.Site.Title}}{{end}}"/>
+<meta property="og:locale" content="{{ .Site.LanguageCode | default "id"}}">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+<meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}" />
+<meta name="twitter:description" content="{{ if .Params.description  }}{{ .Params.description }}{{else}}Update tutorial terbaru, {{.Title}} - {{.Site.Title}}{{end}}" />
+<meta name="twitter:image" content="{{ .Params.thumbnail | default "/default.png" | absURL }}" />
+
+
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
